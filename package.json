@@ -7,7 +7,7 @@
     "build": "npm run build:sass && npm run build:static",
     "build:sass": "node_modules/.bin/node-sass src/scss/style.scss dist/style.css",
     "build:static": "cp src/index.* dist/",
-    "release": "npm run build && git subtree push --prefix dist origin master"
+    "release": "./scripts/release.sh || true"
   },
   "author": "Emma Bukacek",
   "license": "whatever who cares",
