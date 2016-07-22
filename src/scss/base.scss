@@ -1,0 +1,114 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background: $color-default;
+  height: 100vh;
+  font: normal 16px/1.4 "Blanch Condensed Inline";
+  transition: background $speed-normal ease;
+  width: 100vw;
+}
+
+.twitter-bg {
+  background: $color-twitter;
+}
+
+.medium-bg {
+  background: $color-medium;
+}
+
+.github-bg {
+  background: $color-github;
+}
+
+.resume-bg {
+  background: $color-resume;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem 2rem 0;
+  text-align: center;
+  width: 100%;
+
+  @include bp(medium) {
+    justify-content: center;
+    padding: 0 0 0 $content-padding;
+    text-align: left;
+  }
+}
+
+.description {
+  color: $color-white;
+  display: block;
+  font-size: 4rem;
+  height: 4rem;
+  line-height: 4rem;
+  position: relative;
+  width: 100%;
+
+  @include bp(hella-small) {
+    height: 9rem;
+  }
+
+  @include bp(medium) {
+    font-size: 6rem;
+    height: 6rem;
+    line-height: 6rem;
+    overflow: hidden;
+    width: $content-width;
+  }
+
+  .hide {
+    @include bp(medium) {
+      display: block;
+      opacity: 0;
+    }
+  }
+
+  .show {
+    display: block;
+
+    @include bp(medium) {
+      opacity: 1;
+      transform: translateX(0);
+      transition: $speed-normal ease;
+    }
+  }
+
+  > * {
+    display: none;
+
+    @include bp(medium) {
+      display: block;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      transform: translateX(-$content-width);
+      transition: $speed-normal ease;
+    }
+  }
+}
+
+.social-media {
+  align-items: center;
+  color: $color-charcoal;
+  display: flex;
+  font-size: 3rem;
+  justify-content: space-between;
+  width: 100%;
+
+  @include bp(medium) {
+    width: $social-media-width;
+  }
+
+  > * {
+    &:hover {
+      color: $color-white;
+      cursor: pointer;
+    }
+  }
+}

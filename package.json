@@ -1,0 +1,15 @@
+{
+  "name": "brians198.github.io",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build:sass",
+    "build:sass": "node_modules/.bin/node-sass src/scss/style.scss style.css"
+  },
+  "author": "Emma Bukacek",
+  "license": "whatever who cares",
+  "devDependencies": {
+    "node-sass": "~3.8.0"
+  }
+}
