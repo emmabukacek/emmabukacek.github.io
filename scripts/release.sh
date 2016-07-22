@@ -11,7 +11,8 @@
 
 graceful_exit() {
   git reset HEAD .
-  git status -s | awk '{print $2}' | xargs rm
+  git checkout -- .
+  git status -s | awk '$1 == "??" {print $2}' | xargs rm 2> /dev/null || printf "\n\nAll clear! Exiting...\n"
   exit 1
 }
 
