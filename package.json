@@ -1,5 +1,5 @@
 {
-  "name": "brians198.github.io",
+  "name": "emmabukacek.github.io",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,6 @@
     "release": "./scripts/release.sh || true"
   },
   "author": "Emma Bukacek",
-  "license": "whatever who cares",
   "devDependencies": {
     "node-sass": "~3.8.0"
   }
