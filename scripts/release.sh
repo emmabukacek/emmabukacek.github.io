@@ -17,7 +17,7 @@ graceful_exit() {
 }
 
 npm run build
-git checkout release || exit 1
+git checkout develop || exit 1
 
 mkdir __temp
 cp dist/* __temp

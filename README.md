@@ -9,7 +9,7 @@ very carefully...
 ## Usage
 * Make desired changes.
 * Squash commits into single commit. (Preferrably with memes)
-* Merge that shit into `develop` and then `release`.
+* Merge that shit into `develop`.
 * `npm run release` to push it up into `master`.
 
 [![forthebadge](http://forthebadge.com/images/badges/reading-6th-grade-level.svg)](http://forthebadge.com)
